@@ -7,7 +7,7 @@ import FreshExotic from "./Components/FreshExotic";
 import FreshOrganic from "./Components/FreshOrganic";
 import Main1 from "./Components/Main1";
 import Navbar from "./Components/Navbar";
-import OrganicProduct from"./Components/OrganicProduct";
+import OrganicProduct from "./Components/OrganicProduct";
 import OrganicProductCard from "./Components/OrganicProductCard";
 import Testimonal from "./Components/Testimonal";
 import TestimonalsHeading from "./TestimonalsHeading";

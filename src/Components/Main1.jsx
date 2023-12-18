@@ -16,7 +16,7 @@ const Main1 = () => {
   return (
     <>
       <Flex
-        border="1px solid black"
+        // border="1px solid black"
         width="100%"
         height="500px"
         backgroundImage="url('/img/hero-img.jpg')"
@@ -28,8 +28,8 @@ const Main1 = () => {
       >
         {/* text-flex */}
         <Flex
-          border="1px solid black"
-          width={{ lg: "45%", base: "100%", md: "100%" }}
+          // border="1px solid black"
+          width={{ lg: "45%", base: "100%", md: "68%" }}
           height="400px"
           direction="column"
           alignItems="start"
@@ -50,7 +50,7 @@ const Main1 = () => {
           </Heading>
           <Box>
             <Stack spacing={2} border="2px solid #ffb524" borderRadius="8px">
-              <InputGroup size={{lg:"lg",md:"md",base:"sm"}}>
+              <InputGroup size={{ lg: "lg", md: "md", base: "sm" }}>
                 <Input placeholder="Search" backgroundColor="white" />
                 <InputRightAddon
                   children="Submit Now"
@@ -63,9 +63,10 @@ const Main1 = () => {
           </Box>
         </Flex>
         {/* image-flex */}
-        <Flex whiteSpace="nowrap">
+        <Flex>
           <Image
             src="/img/hero-img-2.jpg"
+            // width={{ base: "60%", lg: "100%", md: "100%" }}
             width="100%"
             height="300px"
             marginRight="15px"

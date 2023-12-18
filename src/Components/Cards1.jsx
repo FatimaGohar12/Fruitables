@@ -32,16 +32,17 @@ const Cards1 = () => {
     <>
       <Flex
         // border="1px solid black"
-        height="500px"
+        height={{base:"1000px",lg:"500px",md:"1000px"}}
         width="100%"
         alignItems="center"
         justifyContent="space-around"
+        flexDir={{ base: "column", lg: "row", md: "column" }}
       >
         {cardsData.map((card, index) => (
           <Flex
             key={index}
             // border={"1px solid black"}
-            width="20%"
+            width={{ base: "73%", lg: "20%", md: "40%" }}
             height="230px"
             alignItems="center"
             justifyContent="space-around"
@@ -49,7 +50,7 @@ const Cards1 = () => {
             backgroundColor="#f4f6f8 !important"
             flexDir="column"
           >
-            <Image src={card.iconSrc} width="43%" height="100px" />
+            <Image src={card.iconSrc} width="23%" height="100px" />
             <Heading as="h4" size="md">
               {card.heading}
             </Heading>
