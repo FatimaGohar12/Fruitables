@@ -1,5 +1,14 @@
 import React from "react";
-import { Flex, Heading, Image, Text, Button } from "@chakra-ui/react";
+import "./OrganicProduct.css";
+import {
+  Flex,
+  Heading,
+  Image,
+  Text,
+  Button,
+  GridItem,
+  Grid,
+} from "@chakra-ui/react";
 
 const OrganicProductCard = () => {
   const OrganicProductCardItems = [
@@ -27,7 +36,7 @@ const OrganicProductCard = () => {
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit sed doeiusmod te incididunt",
       price: "$99.99 / kg",
     },
-    
+
     {
       imageSrc: "/img/fruite-item-5.jpg",
       heading: "Raspberries",
@@ -46,7 +55,7 @@ const OrganicProductCard = () => {
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit sed doeiusmod te incididunt",
       price: "$2.99 / kg",
     },
-   
+
     {
       imageSrc: "/img/best-product-3.jpg",
       heading: "Banana",
@@ -55,49 +64,69 @@ const OrganicProductCard = () => {
     },
   ];
 
- 
-
   return (
     <Flex
       border="1px solid black"
-      height="900px"
+      height="auto"
       alignItems="center"
       justifyContent="space-around"
       flexWrap="wrap"
+      flexDir={{ base: "column", lg: "row" }}
     >
-      {OrganicProductCardItems.map((item, index) => (
-        <Flex
-          key={index}
-          border="1px solid #ffb524"
-          width="24%"
-          height="390px"
-          alignItems="center"
-          justifyContent="start"
-          borderRadius="12px"
-          flexDir="column"
-          marginBottom="20px"
-        >
-          <Image
-            src={item.imageSrc}
-            height="172px"
-            width="100%"
-            borderRadius="12px"
-          />
-          <Heading>{item.heading}</Heading>
-          <Text textAlign="center">{item.text}</Text>
-          <Text color="#81c408" fontSize="1.3rem">
-            {item.price}
-          </Text>
-          <Button
-            marginTop="2px"
-            borderRadius="12px"
-            backgroundColor="white"
+      <Grid
+        border="1px solid black"
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          lg: "repeat(4, 1fr)",
+          md: "repeat(2,1fr)",
+        }}
+        gap={{ lg: "3", md: "6", base: "6" }}
+        justifyItems="center"
+      >
+        {OrganicProductCardItems.map((item, index) => (
+          <GridItem
+            key={index}
             border="1px solid #ffb524"
+            width={{ base: "89%", lg: "78%" }}
+            height={{ base: "409px", lg: "390px" }}
+            alignItems="center"
+            justifyContent="center"
+            borderRadius="12px"
+            flexDir="column"
+            marginBottom="20px"
           >
-            Add to Cart
-          </Button>
-        </Flex>
-      ))}
+            <Image
+              src={item.imageSrc}
+              height="206px"
+              width="100%"
+              borderRadius="12px"
+            />
+            <Flex
+              flexDir="column"
+              alignItems="center"
+              justifyContent="space-between"
+              padding={2}
+            >
+              <Heading>{item.heading}</Heading>
+              <Text textAlign="center" fontSize="0.9rem">
+                {item.text}
+              </Text>
+              <Text color="#81c408" fontSize="1.3rem" className="grid-text">
+                {item.price}
+              </Text>
+              <Button
+                marginTop="2px"
+                borderRadius="12px"
+                backgroundColor="white"
+                border="1px solid #ffb524"
+                size={{ base: "sm", lg: "sm", md: "md" }}
+              >
+                Add to Cart
+              </Button>
+            </Flex>
+          </GridItem>
+        ))}
+      </Grid>
     </Flex>
   );
 };

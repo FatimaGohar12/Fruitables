@@ -7,8 +7,8 @@ const FreshOrganic = () => {
   return (
     <>
       <Flex
-        // border="1px solid black"
-        height="500px"
+        border="1px solid black"
+        height={{ base: "1400px", lg: "500px", md: "1500px" }}
         width="100%"
         alignItems="center"
         justifyContent="space-around"
@@ -16,8 +16,8 @@ const FreshOrganic = () => {
       >
         <Flex
           border="1px solid black"
-          width="28%"
-          height="373px"
+          width={{ lg: "22%", base: "85%" }}
+          height="420px"
           borderRadius="23px"
           flexDir="column"
         >
@@ -33,7 +33,7 @@ const FreshOrganic = () => {
           <Flex
             border="1px solid black"
             width="100%"
-            height="153px"
+            height="165px"
             roundedBottomLeft="23px"
             roundedBottomRight="23px"
             backgroundColor="#ffc107"
@@ -41,12 +41,12 @@ const FreshOrganic = () => {
           <Flex
             border="1px solid black"
             bgColor="#81c408"
-            width="20%"
+            width={{ lg: "20%", base: "66%" }}
             height="130px"
             position="absolute"
             borderRadius="12px"
-            marginLeft="45px"
-            marginTop="199px"
+            marginLeft="20px"
+            marginTop="225px"
             alignItems="center"
             justifyContent="center"
             flexDir="column"
@@ -61,8 +61,8 @@ const FreshOrganic = () => {
         </Flex>
         <Flex
           border="1px solid black"
-          width="28%"
-          height="373px"
+          width={{ base: "85%", lg: "22%" }}
+          height="420px"
           borderRadius="23px"
           flexDir="column"
         >
@@ -78,7 +78,7 @@ const FreshOrganic = () => {
           <Flex
             border="1px solid black"
             width="100%"
-            height="153px"
+            height="165px"
             roundedBottomLeft="23px"
             roundedBottomRight="23px"
             backgroundColor="#343a40"
@@ -87,12 +87,12 @@ const FreshOrganic = () => {
             border="1px solid black"
             // bgColor="#81c408"
             bgColor="white"
-            width="20%"
+            width={{ base: "67%", lg: "20%" }}
             height="130px"
             position="absolute"
             borderRadius="12px"
-            marginLeft="45px"
-            marginTop="199px"
+            marginLeft="20px"
+            marginTop="225px"
             alignItems="center"
             justifyContent="center"
             flexDir="column"
@@ -107,8 +107,8 @@ const FreshOrganic = () => {
         </Flex>
         <Flex
           border="1px solid black"
-          width="28%"
-          height="373px"
+          width={{ base: "85%", lg: "22%" }}
+          height="420px"
           borderRadius="23px"
           flexDir="column"
         >
@@ -124,7 +124,7 @@ const FreshOrganic = () => {
           <Flex
             border="1px solid black"
             width="100%"
-            height="153px"
+            height="165px"
             roundedBottomLeft="23px"
             roundedBottomRight="23px"
             backgroundColor="#fd7e14"
@@ -132,12 +132,12 @@ const FreshOrganic = () => {
           <Flex
             border="1px solid black"
             backgroundColor="#ffc107"
-            width="20%"
+            width={{ base: "67%", lg: "20%" }}
             height="130px"
             position="absolute"
             borderRadius="12px"
-            marginLeft="45px"
-            marginTop="199px"
+            marginLeft="20px"
+            marginTop="225px"
             alignItems="center"
             justifyContent="center"
             flexDir="column"

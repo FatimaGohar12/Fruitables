@@ -1,0 +1,6 @@
+/* Medium-sized screens (e.g., 1024x600) */
+@media (min-width: 1024px) and (min-height: 600px) {
+  .grid-text {
+    font-size: 1rem;
+  }
+}
