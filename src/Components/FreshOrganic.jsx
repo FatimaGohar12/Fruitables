@@ -7,8 +7,8 @@ const FreshOrganic = () => {
   return (
     <>
       <Flex
-        border="1px solid black"
-        height={{ base: "1400px", lg: "500px", md: "1500px" }}
+        // border="1px solid black"
+        height={{ base: "1400px", lg: "700px", md: "1500px" }}
         width="100%"
         alignItems="center"
         justifyContent="space-around"

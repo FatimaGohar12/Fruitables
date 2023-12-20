@@ -12,14 +12,14 @@ const testimonalData = [
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Voluptatum aut esse vel. Sunt aliquid aperiam ullam dolor est",
   },
   {
-    clientImage: "/img/testimonial-1.jpg", 
+    clientImage: "/img/testimonial-1.jpg",
     clientName: "Jenny",
     clientProfession: "Doctor",
     clientReview:
       "Lorem, ipsum dolor sit amet consectetur adipisicing elit.Voluptatum aut esse vel. Sunt aliquid aperiam ullam dolor est",
   },
   {
-    clientImage: "/img/testimonial-1.jpg", 
+    clientImage: "/img/testimonial-1.jpg",
     clientName: "Jenny",
     clientProfession: "Engineer",
     clientReview:
@@ -65,7 +65,6 @@ const Testimonal = () => {
         margin="auto"
         alignItems="center"
       >
-      
         <Splide
           options={{
             perPage: 3,
@@ -73,7 +72,15 @@ const Testimonal = () => {
             wheel: true,
             // height: '10rem',
             rewind: true,
-           
+            breakpoints: {
+              1024: {
+                perPage: 3,
+              },
+              768: {
+                perPage: 2,
+              },
+              480: { perPage: 1 },
+            },
           }}
           aria-label="My Favorite Images"
           onMoved={(splide, newIndex) => {
@@ -90,7 +97,7 @@ const Testimonal = () => {
                 cursor="pointer"
                 key={index}
                 border="1px solid white"
-                width="88%"
+                width={{ base: "36%", lg: "88%" }}
                 height="270px"
                 padding="12px"
                 borderRadius="12px"
@@ -98,18 +105,13 @@ const Testimonal = () => {
                 justifyContent="space-around"
                 flexDir="column"
                 bgColor="#f4f6f8"
-                margin="10px" 
+                margin="10px"
               >
                 <Flex width="100%" height="120px" textAlign="center">
                   <Text fontSize="1rem">{item.clientReview}</Text>
                 </Flex>
 
-                <Box
-                  width="100%"
-                  height="2px"
-                  bg="#FFA500" 
-                  my="10px" 
-                />
+                <Box width="100%" height="2px" bg="#FFA500" my="10px" />
                 <Flex
                   width="100%"
                   height="150px"

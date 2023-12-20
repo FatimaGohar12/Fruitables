@@ -32,7 +32,7 @@ const Footer = () => {
           width="90%"
           height={{ base: "269px", lg: "100px" }}
           alignItems="center"
-          justifyContent="space-between"
+          justifyContent="space-around"
           flexDir={{ base: "column", lg: "row" }}
         >
           <Flex
@@ -41,7 +41,7 @@ const Footer = () => {
             height="80px"
             justifyContent="space-around"
             flexDir="column"
-            alignSelf={{ base: "self-start" }}
+            alignSelf={{ base: "self-start" ,lg:"center"}}
           >
             <Heading color="#81c408" fontSize={{ lg: "2rem", base: "2rem" }}>
               Fruitables
@@ -86,7 +86,7 @@ const Footer = () => {
             height="auto"
             align="center"
             justify="space-around"
-            alignSelf={{ base: "end" }}
+            alignSelf={{ base: "end",lg:"center" }}
           >
             <Icon as={FaTwitter} boxSize={iconSize} color="#ffb524" />
             <Icon as={FaFacebook} boxSize={iconSize} color="#ffb524" />

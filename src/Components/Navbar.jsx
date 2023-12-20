@@ -1,30 +1,56 @@
-import React from "react";
-import { Flex, Text, UnorderedList, ListItem } from "@chakra-ui/react";
+import React, { useState } from "react";
+import {
+  Flex,
+  Text,
+  UnorderedList,
+  ListItem,
+  IconButton,
+
+} from "@chakra-ui/react";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
+import {Link } from "react-router-dom";
+
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
       <Flex
-        border={"1px solid black"}
+        // border={"1px solid black"}
         width="100%"
         height="100px"
         alignItems="center"
-        justifyContent="space-around"
+        justifyContent={{ lg: "space-around", base: "space-between" }}
       >
-        <Flex border={"1px solid black"} width="20%" height="68px">
+        <Flex
+          // border={"1px solid black"}
+          width={{ lg: "20%", base: "43%" }}
+          height={{ lg: "68px", base: "68px" }}
+        >
           <Text
             fontWeight="bold"
-            fontSize="3rem"
+            fontSize={{ lg: "3rem", base: "2.5rem" }}
             color="#81c408 !important"
             letterSpacing="2px"
+            ml={8}
           >
             Fruitables
           </Text>
         </Flex>
         <Flex
-          border={"1px solid black"}
+          // border={"1px solid black"}
           width="50%"
           height="68px"
           justifyContent="space-around"
+          display={["none", "none", "flex", "flex"]}
         >
           <UnorderedList
             display="flex"
@@ -35,14 +61,73 @@ const Navbar = () => {
             fontSize="1.3rem"
             cursor="pointer"
           >
-            <ListItem padding="14px">Home</ListItem>
-            <ListItem padding="14px">Shop</ListItem>
+            <ListItem padding="14px"  >
+              <Link to="/" >
+                Home
+              </Link>
+            </ListItem>
+            <ListItem padding="14px"  >
+              <Link to="/Shop" >
+                Shop
+              </Link>
+            </ListItem>
+
             <ListItem padding="14px">Shop Detail</ListItem>
             <ListItem padding="14px">Pages</ListItem>
             <ListItem padding="14px">Contact</ListItem>
           </UnorderedList>
         </Flex>
+        <IconButton
+          aria-label="open Menu"
+          size="lg"
+          mr={2}
+          icon={HamburgerIcon}
+          display={["flex", "flex", "none", "none"]}
+          onClick={toggleMenu}
+          cursor="pointer"
+        />
       </Flex>
+
+      {/* Responsive Menu */}
+      {isMenuOpen && (
+        <Flex
+          w="100vw"
+          bgColor="gray.50"
+          zIndex={20}
+          h="100vh"
+          pos="fixed"
+          top="0"
+          left="0"
+          overflowY="auto"
+          flexDir="column"
+        >
+          <Flex justify="flex-end" p={4} position="absolute" top="0" right="0">
+            <IconButton
+              aria-label="close Menu"
+              size="lg"
+              icon={<CloseIcon />}
+              onClick={closeMenu}
+            />
+          </Flex>
+          <Flex flexDir="column" alignItems="center">
+            <UnorderedList
+              display="flex"
+              flexDirection="column"
+              alignItems="center"
+              listStyleType="none"
+              justifyContent="space-around"
+              fontSize="1.3rem"
+              cursor="pointer"
+            >
+              <ListItem padding="14px">Home</ListItem>
+              <ListItem padding="14px">Shop</ListItem>
+              <ListItem padding="14px">Shop Detail</ListItem>
+              <ListItem padding="14px">Pages</ListItem>
+              <ListItem padding="14px">Contact</ListItem>
+            </UnorderedList>
+          </Flex>
+        </Flex>
+      )}
     </>
   );
 };

@@ -8,7 +8,7 @@ const FreshExotic = () => {
       <Flex
         // border="1px solid black"
         width="100%"
-        height={{ lg: "500px", base: "700px" }}
+        height={{ lg: "700px", base: "700px" }}
         bgColor="#ffc107"
         align="center"
         justifyContent={{lg:"space-around"}}
