@@ -19,13 +19,13 @@ function App() {
       <Main1 />
       <Cards1 />
       <OrganicProduct />
-      <OrganicProductCard /> 
+      <OrganicProductCard />
       <FreshOrganic />
       <FreshExotic />
-       <BestSeller />
-      <BestSellerCards /> 
-      {/* <TestimonalsHeading /> */}
-      {/* <Testimonal /> */}
+      <BestSeller />
+      <BestSellerCards />
+      <TestimonalsHeading />
+      <Testimonal />
       <Footer />
     </>
   );

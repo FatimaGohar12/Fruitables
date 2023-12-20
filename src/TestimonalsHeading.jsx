@@ -5,18 +5,26 @@ const TestimonalsHeading = () => {
   return (
     <>
       <Flex
-        //   border="1px solid black"
-
+        // border="1px solid black"
         width="100%"
         height="300px"
         alignItems="center"
         justifyContent="center"
         flexDir="column"
       >
-        <Text fontSize="5.6rem" color="#81c408" fontWeight="bold">
+        <Text
+          fontSize={{ lg: "5.6rem", base: "3rem" }}
+          color="#81c408"
+          fontWeight="bold"
+          textAlign="center"
+        >
           Our Testimonial
         </Text>
-        <Heading fontSize="3rem" fontWeight="bold">
+        <Heading
+          fontSize={{ lg: "3rem", base: "2rem" }}
+          fontWeight="bold"
+          textAlign="center"
+        >
           Our Client Saying!
         </Heading>
       </Flex>
