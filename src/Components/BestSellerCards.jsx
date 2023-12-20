@@ -1,73 +1,77 @@
-import { Button, Flex, Heading, Text } from "@chakra-ui/react";
+import { Button, Flex, Heading, Text, Grid } from "@chakra-ui/react";
 import { FaShoppingCart } from "react-icons/fa";
+import "./BestSellerCards.css";
 import React from "react";
 
 const BestSellerCardsItems = [
   {
     itemImage: "img/fruite-item-1.jpg",
     itemHeading: "Organic Tomato",
-    itemPrice: "3.2$",
+    itemPrice: "8.2$",
   },
   {
     itemImage: "img/fruite-item-2.jpg",
     itemHeading: "Organic Tomato",
-    itemPrice: "3.2$",
+    itemPrice: "2.2$",
   },
   {
     itemImage: "img/fruite-item-3.jpg",
     itemHeading: "Organic Tomato",
-    itemPrice: "3.2$",
+    itemPrice: "9.2$",
   },
   {
     itemImage: "img/fruite-item-4.jpg",
-    itemHeading: "Organic Tomato",
-    itemPrice: "3.2$",
+    itemHeading: "Fresh Tomato",
+    itemPrice: "7.2$",
   },
   {
     itemImage: "img/fruite-item-5.jpg",
-    itemHeading: "Organic Tomato",
+    itemHeading: "Organic Orange",
     itemPrice: "3.2$",
   },
   {
     itemImage: "img/fruite-item-6.jpg",
     itemHeading: "Organic Tomato",
-    itemPrice: "3.2$",
+    itemPrice: "9.2$",
   },
 ];
 
 const BestSellerCards = () => {
   return (
     <>
-      <Flex
+      <Grid
+      height={{lg:"600px",base:"1700px"}}
+        templateColumns={{
+          base: "1fr", // 1 column for small screens
+          md: "repeat(2, 1fr)", // 2 columns for medium screens
+          lg: "repeat(3, 1fr)", // 3 columns for large screens
+        }}
+        gap={6}
         width="90%"
         margin="auto"
-        height="500px"
-        flexWrap="wrap"
-        justifyContent="space-around"
+        mt={8}
       >
         {BestSellerCardsItems.map((item, index) => (
           <Flex
             key={index}
-            // border="1px solid black"
-            width="30%"
-            height="230px"
+            width="100%"
+            height="250px"
             borderRadius="12px"
             alignItems="center"
             bgColor="#f4f6f8"
             justifyContent="space-around"
-            margin="10px"
+            className="card-1"
+            cursor="pointer"
           >
             <Flex
-              // border="1px solid black"
               borderRadius="50%"
               width="30%"
-              height="100px"
+              height={{ base: "102px", lg: "149px" }}
               bgImg={`url(${item.itemImage})`}
               backgroundSize="cover"
               backgroundPosition="center"
             ></Flex>
             <Flex
-              // border="1px solid black"
               width="50%"
               height="150px"
               alignItems="center"
@@ -78,13 +82,17 @@ const BestSellerCards = () => {
               <Text fontSize="1.7rem" fontWeight="bold">
                 {item.itemPrice}
               </Text>
-              <Button leftIcon={<FaShoppingCart />} colorScheme="green">
+              <Button
+                leftIcon={<FaShoppingCart />}
+                colorScheme="green"
+                size={{ lg: "md", md: "md", base: "sm" }}
+              >
                 Add to Cart
               </Button>
             </Flex>
           </Flex>
         ))}
-      </Flex>
+      </Grid>
     </>
   );
 };

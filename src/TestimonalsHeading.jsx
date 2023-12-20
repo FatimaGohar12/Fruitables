@@ -13,7 +13,7 @@ const TestimonalsHeading = () => {
         justifyContent="center"
         flexDir="column"
       >
-        <Text fontSize="1.6rem" color="#81c408" fontWeight="bold">
+        <Text fontSize="5.6rem" color="#81c408" fontWeight="bold">
           Our Testimonial
         </Text>
         <Heading fontSize="3rem" fontWeight="bold">

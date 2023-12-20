@@ -66,7 +66,7 @@ const OrganicProductCard = () => {
 
   return (
     <Flex
-      border="1px solid black"
+      // border="1px solid black"
       height="auto"
       alignItems="center"
       justifyContent="space-around"
@@ -74,7 +74,7 @@ const OrganicProductCard = () => {
       flexDir={{ base: "column", lg: "row" }}
     >
       <Grid
-        border="1px solid black"
+        // border="1px solid black"
         templateColumns={{
           base: "repeat(1, 1fr)",
           lg: "repeat(4, 1fr)",

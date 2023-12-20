@@ -7,15 +7,19 @@ const BestSeller = () => {
       <Flex
         // border="1px solid black"
         width="100%"
-        height="322px"
+        height={{base:"205px",lg:"322px"}}
         alignItems="center"
         justifyContent="center"
         flexDir="column"
       >
-        <Heading fontSize="4rem" color="#45595b">
+        <Heading fontSize={{ base: "2rem", lg: "6rem" }} color="#45595b">
           Bestseller Products
         </Heading>
-        <Text color="#45595b">
+        <Text
+          color="#45595b"
+          fontSize={{ lg: "1.4rem", base: "1rem" }}
+          textAlign="center"
+        >
           Latin words, combined with a handful of model sentence structures, to
           generate Lorem Ipsum which looks reasonable.
         </Text>

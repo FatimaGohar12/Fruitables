@@ -15,7 +15,7 @@ import TestimonalsHeading from "./TestimonalsHeading";
 function App() {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Main1 />
       <Cards1 />
       <OrganicProduct />
@@ -23,9 +23,9 @@ function App() {
       <FreshOrganic />
       <FreshExotic />
        <BestSeller />
-      <BestSellerCards />
-      <TestimonalsHeading />
-      <Testimonal />
+      <BestSellerCards /> 
+      {/* <TestimonalsHeading /> */}
+      {/* <Testimonal /> */}
       <Footer />
     </>
   );
