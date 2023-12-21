@@ -43,7 +43,7 @@ const Cards1 = () => {
             key={index}
             // border={"1px solid black"}
             width={{ base: "73%", lg: "20%", md: "40%" }}
-            height="230px"
+            height="270px"
             alignItems="center"
             justifyContent="space-around"
             borderRadius="23px"

@@ -41,7 +41,7 @@ const Footer = () => {
             height="80px"
             justifyContent="space-around"
             flexDir="column"
-            alignSelf={{ base: "self-start" ,lg:"center"}}
+            alignSelf={{ base: "self-start", lg: "center" }}
           >
             <Heading color="#81c408" fontSize={{ lg: "2rem", base: "2rem" }}>
               Fruitables
@@ -86,7 +86,7 @@ const Footer = () => {
             height="auto"
             align="center"
             justify="space-around"
-            alignSelf={{ base: "end",lg:"center" }}
+            alignSelf={{ base: "end", lg: "center" }}
           >
             <Icon as={FaTwitter} boxSize={iconSize} color="#ffb524" />
             <Icon as={FaFacebook} boxSize={iconSize} color="#ffb524" />
@@ -94,6 +94,7 @@ const Footer = () => {
             <Icon as={FaYoutube} boxSize={iconSize} color="#ffb524" />
           </Flex>
         </Flex>
+        <Box width="100%" height="2px" bg="#FFA500" my="10px" mx="12px" />
         <Flex
           // border="1px solid black"
           width="90%"

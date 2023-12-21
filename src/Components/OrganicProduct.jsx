@@ -38,7 +38,7 @@ const OrganicProduct = () => {
           justifyContent="space-evenly"
           alignItems="center"
           width="50%"
-          // height={{ base: "100px", lg: "50px" }}
+          height={{ base: "300px", lg: "50px" }}
           // flexWrap="wrap"
         >
           <UnorderedList

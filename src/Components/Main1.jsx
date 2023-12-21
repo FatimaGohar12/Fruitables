@@ -25,7 +25,7 @@ const Main1 = () => {
       <Flex
         // border="1px solid black"
         width="100%"
-        height="500px"
+        height="600px"
         backgroundImage="url('/img/hero-img.jpg')"
         backgroundSize="cover"
         backgroundPosition="center"
@@ -45,13 +45,13 @@ const Main1 = () => {
         >
           <Text
             color="#ffb524 !important"
-            fontSize={{ lg: "2.4rem", base: "1rem", md: "1rem" }}
+            fontSize={{ lg: "3rem", base: "1rem", md: "1rem" }}
           >
             100% Organic Foods
           </Text>
           <Heading
             color="#81c408 !important"
-            fontSize={{ lg: "3.5rem", md: "1.3rem", base: "1.3rem" }}
+            fontSize={{ lg: "4rem", md: "1.3rem", base: "1.3rem" }}
           >
             Organic Veggies & Fruits Foods
           </Heading>
@@ -75,7 +75,7 @@ const Main1 = () => {
             src="/img/hero-img-2.jpg"
             // width={{ base: "60%", lg: "100%", md: "100%" }}
             width="100%"
-            height="300px"
+            height="500px"
             marginRight="15px"
           ></Image>
         </Flex>

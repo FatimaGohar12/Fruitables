@@ -62,15 +62,17 @@ const Testimonal = () => {
         // border="1px solid black"
         width="auto"
         height="400px"
-        margin="auto"
+        // margin="auto"
         alignItems="center"
       >
         <Splide
           options={{
+            // dots: false,
             perPage: 3,
             arrows: false,
             wheel: true,
             // height: '10rem',
+
             rewind: true,
             breakpoints: {
               1024: {
@@ -112,7 +114,7 @@ const Testimonal = () => {
                 </Flex>
 
                 <Box width="100%" height="2px" bg="#FFA500" my="10px" />
-                
+
                 <Flex
                   width="100%"
                   height="150px"

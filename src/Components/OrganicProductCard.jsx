@@ -25,7 +25,7 @@ const OrganicProductCard = ({ selectedCategory }) => {
     },
     {
       imageSrc: "/img/best-product-2.jpg",
-      heading: "Grapes",
+      heading: "FlexSeeds",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit sed doeiusmod te incididunt",
       price: "$24 / kg",
       category: "Vegetables",
@@ -107,7 +107,7 @@ const OrganicProductCard = ({ selectedCategory }) => {
             key={index}
             border="1px solid #ffb524"
             width={{ base: "89%", lg: "78%" }}
-            height={{ base: "409px", lg: "390px" }}
+            height={{ base: "409px", lg: "408px" }}
             alignItems="center"
             justifyContent="center"
             borderRadius="12px"
