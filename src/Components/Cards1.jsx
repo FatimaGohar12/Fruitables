@@ -32,7 +32,7 @@ const Cards1 = () => {
     <>
       <Flex
         // border="1px solid black"
-        height={{base:"1000px",lg:"500px",md:"1000px"}}
+        height={{ base: "1000px", lg: "500px", md: "1000px" }}
         width="100%"
         alignItems="center"
         justifyContent="space-around"
@@ -50,7 +50,11 @@ const Cards1 = () => {
             backgroundColor="#f4f6f8 !important"
             flexDir="column"
           >
-            <Image src={card.iconSrc} width="23%" height="100px" />
+            <Image
+              src={card.iconSrc}
+              width="23%"
+              height={{ base: "78px", lg: "100px" }}
+            />
             <Heading as="h4" size="md">
               {card.heading}
             </Heading>

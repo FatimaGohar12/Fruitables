@@ -1,16 +1,13 @@
-import React from 'react'
-import OrganicProduct from './OrganicProduct'
-import OrganicProductCard from './OrganicProductCard'
+import React from "react";
+import OrganicProduct from "./OrganicProduct";
+import OrganicProductCard from "./OrganicProductCard";
 
 const Shop = () => {
   return (
     <>
-    <OrganicProduct>
-
-    </OrganicProduct>
-    <OrganicProductCard/>
+      <OrganicProduct />
     </>
-  )
-}
+  );
+};
 
-export default Shop
+export default Shop;

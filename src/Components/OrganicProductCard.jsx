@@ -10,31 +10,36 @@ import {
   Grid,
 } from "@chakra-ui/react";
 
-const OrganicProductCard = () => {
+const OrganicProductCard = ({ selectedCategory }) => {
+   
   const OrganicProductCardItems = [
     {
       imageSrc: "/img/fruite-item-5.jpg",
       heading: "Grapes",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit sed doeiusmod te incididunt",
       price: "$4.99 / kg",
+      category:"Fruite",
     },
     {
       imageSrc: "/img/best-product-2.jpg",
       heading: "Grapes",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit sed doeiusmod te incididunt",
       price: "$24 / kg",
+      category:"Vegetables",
     },
     {
       imageSrc: "/img/fruite-item-5.jpg",
       heading: "Apricots",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit sed doeiusmod te incididunt",
       price: "$22.9 / kg",
+      category:"Fruite",
     },
     {
       imageSrc: "/img/fruite-item-1.jpg",
       heading: "Grapes",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit sed doeiusmod te incididunt",
       price: "$99.99 / kg",
+      category:"Bread",
     },
 
     {
@@ -42,18 +47,22 @@ const OrganicProductCard = () => {
       heading: "Raspberries",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit sed doeiusmod te incididunt",
       price: "$4.99 / kg",
+      category:"Meat",
     },
     {
       imageSrc: "/img/best-product-2.jpg",
       heading: "Oranges",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit sed doeiusmod te incididunt",
       price: "$4.99 / kg",
+      category:"Meat",
     },
     {
       imageSrc: "/img/fruite-item-5.jpg",
       heading: "Gravey",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit sed doeiusmod te incididunt",
       price: "$2.99 / kg",
+      category:"Fruite",
+      
     },
 
     {
@@ -61,8 +70,13 @@ const OrganicProductCard = () => {
       heading: "Banana",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit sed doeiusmod te incididunt",
       price: "$2.99 / kg",
+      category:"Bread",
     },
   ];
+   // Filter items based on the selected category
+   const filteredItems = OrganicProductCardItems.filter(
+    (item) => selectedCategory === 'All Products' || item.category === selectedCategory
+  );
 
   return (
     <Flex
@@ -83,7 +97,7 @@ const OrganicProductCard = () => {
         gap={{ lg: "3", md: "6", base: "6" }}
         justifyItems="center"
       >
-        {OrganicProductCardItems.map((item, index) => (
+        {filteredItems.map((item, index) => (
           <GridItem
             key={index}
             border="1px solid #ffb524"

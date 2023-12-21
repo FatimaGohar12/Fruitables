@@ -5,10 +5,9 @@ import {
   UnorderedList,
   ListItem,
   IconButton,
-
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import {Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -61,20 +60,18 @@ const Navbar = () => {
             fontSize="1.3rem"
             cursor="pointer"
           >
-            <ListItem padding="14px"  >
-              <Link to="/" >
-                Home
-              </Link>
+            <ListItem padding="14px">
+              <Link to="/">Home</Link>
             </ListItem>
-            <ListItem padding="14px"  >
-              <Link to="/Shop" >
-                Shop
-              </Link>
+            <ListItem padding="14px">
+              <Link to="/Shop">Shop</Link>
             </ListItem>
-
-            <ListItem padding="14px">Shop Detail</ListItem>
-            <ListItem padding="14px">Pages</ListItem>
-            <ListItem padding="14px">Contact</ListItem>
+            <ListItem padding="14px">
+              <Link to="/ShopDetail">Shop Detail</Link>
+            </ListItem>
+            <ListItem padding="14px">
+              <Link to="/TestimonalBox">Reviews</Link>
+            </ListItem>
           </UnorderedList>
         </Flex>
         <IconButton
@@ -119,11 +116,18 @@ const Navbar = () => {
               fontSize="1.3rem"
               cursor="pointer"
             >
-              <ListItem padding="14px">Home</ListItem>
-              <ListItem padding="14px">Shop</ListItem>
-              <ListItem padding="14px">Shop Detail</ListItem>
-              <ListItem padding="14px">Pages</ListItem>
-              <ListItem padding="14px">Contact</ListItem>
+              <ListItem padding="14px">
+                <Link to="/">Home</Link>
+              </ListItem>
+              <ListItem padding="14px">
+                <Link to="/Shop">Shop</Link>
+              </ListItem>
+              <ListItem padding="14px">
+                <Link to="/ShopDetail">Shop Detail</Link>
+              </ListItem>
+              <ListItem padding="14px">
+                <Link to="/TestimonalBox">Reviews</Link>
+              </ListItem>
             </UnorderedList>
           </Flex>
         </Flex>

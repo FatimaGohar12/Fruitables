@@ -11,6 +11,13 @@ import {
   InputRightAddon,
   Image,
 } from "@chakra-ui/react";
+import Cards1 from "./Cards1";
+import Shop from "./Shop";
+import FreshOrganic from "./FreshOrganic";
+import FreshExotic from "./FreshExotic";
+import ShopDetail from "./ShopDetail";
+import TestimonalBox from "./TestimonalBox";
+import Footer from "./Footer";
 
 const Main1 = () => {
   return (
@@ -73,6 +80,13 @@ const Main1 = () => {
           ></Image>
         </Flex>
       </Flex>
+      <Cards1/>
+      <Shop/>
+      <FreshOrganic/>
+      <FreshExotic/>
+      <ShopDetail/>
+      <TestimonalBox/>
+      <Footer/>
     </>
   );
 };

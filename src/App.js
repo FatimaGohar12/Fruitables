@@ -1,37 +1,34 @@
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import BestSeller from "./Components/BestSeller";
-import BestSellerCards from "./Components/BestSellerCards";
+
 import Cards1 from "./Components/Cards1";
 import Footer from "./Components/Footer";
 import FreshExotic from "./Components/FreshExotic";
 import FreshOrganic from "./Components/FreshOrganic";
 import Main1 from "./Components/Main1";
 import Navbar from "./Components/Navbar";
-import OrganicProduct from "./Components/OrganicProduct";
-import OrganicProductCard from "./Components/OrganicProductCard";
-import Testimonal from "./Components/Testimonal";
-import TestimonalsHeading from "./TestimonalsHeading";
+
 import Shop from "./Components/Shop";
+import ShopDetail from "./Components/ShopDetail";
+import TestimonalBox from "./Components/TestimonalBox";
 
 function App() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   return (
     <>
       <Navbar />
-     
-      <Main1 />
-      <Cards1 />
-      <OrganicProduct />
-      <OrganicProductCard />
-      <FreshOrganic />
-      <FreshExotic />
-      <BestSeller />
-      <BestSellerCards />
-      <TestimonalsHeading />
-      <Testimonal />
-      <Footer />
-      
+
+      <Routes>
+        <Route path="" element={<Main1 />} />
+        <Route path="/Cards1" element={<Cards1 />} />
+        <Route path="/Shop" element={<Shop />} />
+        <Route path="/FreshOrganic" element={<FreshOrganic />} />
+        <Route path="/FreshExotic" element={<FreshExotic />} />
+        <Route path="/ShopDetail" element={<ShopDetail />} />
+        <Route path="/TestimonalBox" element={<TestimonalBox />} />
+
+        <Route path="" element={<Footer />} />
+      </Routes>
     </>
   );
 }
