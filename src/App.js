@@ -11,24 +11,27 @@ import Navbar from "./Components/Navbar";
 import Shop from "./Components/Shop";
 import ShopDetail from "./Components/ShopDetail";
 import TestimonalBox from "./Components/TestimonalBox";
-
+import CartProduct from "./CartProduct";
+import { ProductProvider } from "./Components/ProductContext";
 function App() {
   // const navigate = useNavigate();
   return (
     <>
-      <Navbar />
+      <ProductProvider>
+        <Navbar />
 
-      <Routes>
-        <Route path="" element={<Main1 />} />
-        <Route path="/Cards1" element={<Cards1 />} />
-        <Route path="/Shop" element={<Shop />} />
-        <Route path="/FreshOrganic" element={<FreshOrganic />} />
-        <Route path="/FreshExotic" element={<FreshExotic />} />
-        <Route path="/ShopDetail" element={<ShopDetail />} />
-        <Route path="/TestimonalBox" element={<TestimonalBox />} />
-
-        <Route path="" element={<Footer />} />
-      </Routes>
+        <Routes>
+          <Route path="" element={<Main1 />} />
+          <Route path="/Cards1" element={<Cards1 />} />
+          <Route path="/Shop" element={<Shop />} />
+          <Route path="/FreshOrganic" element={<FreshOrganic />} />
+          <Route path="/FreshExotic" element={<FreshExotic />} />
+          <Route path="/ShopDetail" element={<ShopDetail />} />
+          <Route path="/TestimonalBox" element={<TestimonalBox />} />
+          <Route path="/cart" element={<CartProduct />} />
+          <Route path="" element={<Footer />} />
+        </Routes>
+      </ProductProvider>
     </>
   );
 }

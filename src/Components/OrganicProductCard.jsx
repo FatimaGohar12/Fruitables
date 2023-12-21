@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./OrganicProduct.css";
 import {
   Flex,
@@ -9,37 +9,40 @@ import {
   GridItem,
   Grid,
 } from "@chakra-ui/react";
+import { useNavigate } from "react-router-dom";
+import CartProduct from "../CartProduct";
+import { useProductContext } from "./ProductContext";
 
 const OrganicProductCard = ({ selectedCategory }) => {
-   
+  const navigate = useNavigate();
   const OrganicProductCardItems = [
     {
       imageSrc: "/img/fruite-item-5.jpg",
       heading: "Grapes",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit sed doeiusmod te incididunt",
       price: "$4.99 / kg",
-      category:"Fruite",
+      category: "Fruite",
     },
     {
       imageSrc: "/img/best-product-2.jpg",
       heading: "Grapes",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit sed doeiusmod te incididunt",
       price: "$24 / kg",
-      category:"Vegetables",
+      category: "Vegetables",
     },
     {
       imageSrc: "/img/fruite-item-5.jpg",
       heading: "Apricots",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit sed doeiusmod te incididunt",
       price: "$22.9 / kg",
-      category:"Fruite",
+      category: "Fruite",
     },
     {
       imageSrc: "/img/fruite-item-1.jpg",
       heading: "Grapes",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit sed doeiusmod te incididunt",
       price: "$99.99 / kg",
-      category:"Bread",
+      category: "Bread",
     },
 
     {
@@ -47,22 +50,21 @@ const OrganicProductCard = ({ selectedCategory }) => {
       heading: "Raspberries",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit sed doeiusmod te incididunt",
       price: "$4.99 / kg",
-      category:"Meat",
+      category: "Meat",
     },
     {
       imageSrc: "/img/best-product-2.jpg",
       heading: "Oranges",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit sed doeiusmod te incididunt",
       price: "$4.99 / kg",
-      category:"Meat",
+      category: "Meat",
     },
     {
       imageSrc: "/img/fruite-item-5.jpg",
       heading: "Gravey",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit sed doeiusmod te incididunt",
       price: "$2.99 / kg",
-      category:"Fruite",
-      
+      category: "Fruite",
     },
 
     {
@@ -70,13 +72,16 @@ const OrganicProductCard = ({ selectedCategory }) => {
       heading: "Banana",
       text: "  Lorem ipsum dolor sit amet consectetur adipisicing elit sed doeiusmod te incididunt",
       price: "$2.99 / kg",
-      category:"Bread",
+      category: "Bread",
     },
   ];
-   // Filter items based on the selected category
-   const filteredItems = OrganicProductCardItems.filter(
-    (item) => selectedCategory === 'All Products' || item.category === selectedCategory
+  // Filter items based on the selected category
+  const filteredItems = OrganicProductCardItems.filter(
+    (item) =>
+      selectedCategory === "All Products" || item.category === selectedCategory
   );
+
+  const { setSelectedItem, selectedItem } = useProductContext();
 
   return (
     <Flex
@@ -129,6 +134,11 @@ const OrganicProductCard = ({ selectedCategory }) => {
                 {item.price}
               </Text>
               <Button
+                onClick={() => {
+                  setSelectedItem(item);
+                  console.log("Items selected", item);
+                  navigate("/cart"); // Navigate to the cart page
+                }}
                 marginTop="2px"
                 borderRadius="12px"
                 backgroundColor="white"
