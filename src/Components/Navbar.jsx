@@ -46,7 +46,7 @@ const Navbar = () => {
         </Flex>
         <Flex
           // border={"1px solid black"}
-          width="50%"
+          width={{lg:"50%",base:"55%"}}
           height="68px"
           justifyContent="space-around"
           display={["none", "none", "flex", "flex"]}

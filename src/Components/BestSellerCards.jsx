@@ -43,7 +43,7 @@ const BestSellerCards = () => {
       height={{lg:"600px",base:"1700px"}}
         templateColumns={{
           base: "1fr", // 1 column for small screens
-          md: "repeat(2, 1fr)", // 2 columns for medium screens
+          md: "1fr", // 2 columns for medium screens
           lg: "repeat(3, 1fr)", // 3 columns for large screens
         }}
         gap={6}

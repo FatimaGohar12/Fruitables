@@ -10,14 +10,16 @@ const FreshExotic = () => {
         width="100%"
         height={{ lg: "700px", base: "700px" }}
         bgColor="#ffc107"
-        align="center"
-        justifyContent={{lg:"space-around"}}
+        alignItems="center"
+        justifyContent="space-around"
+        // align="center"
+        // justifyContent={{lg:"space-around"}}
         flexDir={{ base: "column", lg: "row", md: "column" }}
       >
         <Flex
           // border="1px solid black"
           width={{ base: "88%", lg: "45%" }}
-          height={{ base: "367px", lg: "383px" }}
+          height={{ base: "420px", lg: "383px" }}
           alignItems="start"
           // justifyContent="space-around"
           flexDir="column"
@@ -25,11 +27,11 @@ const FreshExotic = () => {
         >
           <Heading
             color="white"
-            fontSize={{ base: "3rem", lg: "6rem", md: "3rem" }}
+            fontSize={{ base: "3rem", lg: "5rem", md: "3rem" }}
           >
             Fresh Exotic Fruits
           </Heading>
-          <Text fontSize={{ base: "3rem", lg: "5rem", md: "3rem" }}>
+          <Text fontSize={{ base: "3rem", lg: "4rem", md: "3rem" }}>
             in Our Store
           </Text>
 

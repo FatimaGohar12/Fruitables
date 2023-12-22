@@ -12,7 +12,10 @@ const BestSeller = () => {
         justifyContent="center"
         flexDir="column"
       >
-        <Heading fontSize={{ base: "2rem", lg: "6rem" }} color="#45595b">
+        <Heading fontSize={{ base: "2rem", lg: "6rem" }} color="#45595b"
+        
+        textAlign="center"
+        >
           Bestseller Products
         </Heading>
         <Text

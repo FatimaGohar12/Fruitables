@@ -32,7 +32,7 @@ const Cards1 = () => {
     <>
       <Flex
         // border="1px solid black"
-        height={{ base: "1000px", lg: "500px", md: "1000px" }}
+        height={{ base: "1300px", lg: "500px", md: "1300px" }}
         width="100%"
         alignItems="center"
         justifyContent="space-around"
