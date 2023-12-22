@@ -81,14 +81,14 @@ const Main1 = () => {
           ></Image>
         </Flex>
       </Flex>
-      <Cards1 />
+      {/* <Cards1 />
       <Shop />
       <FreshOrganic />
       <FreshExotic />
       <ShopDetail />
-      <Services />
-      {/* <TestimonalBox /> */}
-      <Footer />
+      <Services /> */}
+      <TestimonalBox />
+      {/* <Footer /> */}
     </>
   );
 };

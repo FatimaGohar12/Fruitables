@@ -13,7 +13,13 @@ const CartProduct = () => {
         alignItems="center"
         justifyContent="center"
       >
-        <Text fontSize="5rem" color="#81c408" >No item selected</Text>
+        <Text
+          fontSize={{ lg: "5rem", base: "4rem" }}
+          textAlign="center"
+          color="#81c408"
+        >
+          No item selected
+        </Text>
       </Flex>
     );
   }
@@ -24,14 +30,14 @@ const CartProduct = () => {
         width="100%"
         height="700px"
         alignItems="center"
-        justifyContent="space-around"
+        justifyContent={{ lg: "space-around", base: "start" }}
         flexDir={{ base: "column-reverse", lg: "row" }}
       >
         {/* Image-flex */}
         <Flex
           border="1px solid white"
-          width={{ lg: "40%", base: "100%" }}
-          height="450px"
+          width={{ lg: "40%", base: "60%" }}
+          height={{ lg: "450px", base: "300px" }}
         >
           <Image width="100%" src={selectedItem.imageSrc}></Image>
         </Flex>
