@@ -13,17 +13,15 @@ import ShopDetail from "./Components/ShopDetail";
 import TestimonalBox from "./Components/TestimonalBox";
 import CartProduct from "./CartProduct";
 import { ProductProvider } from "./Components/ProductContext";
-import Testimonal from "./Components/Testimonal";
 function App() {
   // const navigate = useNavigate();
   return (
     <>
       <ProductProvider>
-        {/* <Navbar /> */}
-        <Testimonal/>
+        <Navbar />
 
         <Routes>
-          {/* <Route path="" element={<Main1 />} /> */}
+          <Route path="" element={<Main1 />} />
           <Route path="/Cards1" element={<Cards1 />} />
           <Route path="/Shop" element={<Shop />} />
           <Route path="/FreshOrganic" element={<FreshOrganic />} />
@@ -31,7 +29,7 @@ function App() {
           <Route path="/ShopDetail" element={<ShopDetail />} />
           <Route path="/TestimonalBox" element={<TestimonalBox />} />
           <Route path="/cart" element={<CartProduct />} />
-          {/* <Route path="" element={<Footer />} /> */}
+          <Route path="" element={<Footer />} />
         </Routes>
       </ProductProvider>
     </>
