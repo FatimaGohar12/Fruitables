@@ -46,7 +46,7 @@ const Navbar = () => {
         </Flex>
         <Flex
           // border={"1px solid black"}
-          width={{lg:"50%",base:"55%"}}
+          width={{ lg: "50%", base: "55%" }}
           height="68px"
           justifyContent="space-around"
           display={["none", "none", "flex", "flex"]}
@@ -85,7 +85,6 @@ const Navbar = () => {
         />
       </Flex>
 
-      {/* Responsive Menu */}
       {isMenuOpen && (
         <Flex
           w="100vw"
@@ -117,16 +116,24 @@ const Navbar = () => {
               cursor="pointer"
             >
               <ListItem padding="14px">
-                <Link to="/">Home</Link>
+                <Link to="/" onClick={closeMenu}>
+                  Home
+                </Link>
               </ListItem>
               <ListItem padding="14px">
-                <Link to="/Shop">Shop</Link>
+                <Link to="/Shop" onClick={closeMenu}>
+                  Shop
+                </Link>
               </ListItem>
               <ListItem padding="14px">
-                <Link to="/ShopDetail">Shop Detail</Link>
+                <Link to="/ShopDetail" onClick={closeMenu}>
+                  Shop Detail
+                </Link>
               </ListItem>
               <ListItem padding="14px">
-                <Link to="/TestimonalBox">Reviews</Link>
+                <Link to="/TestimonalBox" onClick={closeMenu}>
+                  Reviews
+                </Link>
               </ListItem>
             </UnorderedList>
           </Flex>
